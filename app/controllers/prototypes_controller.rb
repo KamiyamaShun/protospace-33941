@@ -53,7 +53,7 @@ before_action :mover_to_index, except: [:index, :show]
   end
 
   def mover_to_index
-    if user_signed_in?
+    unless user_signed_in?
       redirect_to action: :index
     end
   end
