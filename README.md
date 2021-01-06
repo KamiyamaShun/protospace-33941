@@ -19,7 +19,7 @@
 | title       | string     | null: false                    |
 | catch_copy  | text       | null: false                    |
 | concept     | text       | null: false                    |
-| user        | references |                                |
+| user        | references | foreign_key: true              |
 
 -- belongs_to :user
 -- has_many :comments
@@ -29,8 +29,8 @@
 | Column      | Type       | Options                        |
 | ---------   | ---------- | ------------------------------ |
 | text        | text       | null: false                    |
-| user        | references |                                |
-| prototype   | references |                                |
+| user        | references | foreign_key: true              |
+| prototype   | references | foreign_key: true              |
 
 -- belongs_to :user
 -- belongs_to :comment
