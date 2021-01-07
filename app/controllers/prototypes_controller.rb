@@ -34,6 +34,7 @@ before_action :mover_to_index, except: [:index, :show]
     if prototype.update(prototype_params)
       redirect_to prototype_path(params[:id])
     else
+      @prototype = Prototype.find(params[:id])
       render :edit
     end  
   end
