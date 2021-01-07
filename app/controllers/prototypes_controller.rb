@@ -16,6 +16,7 @@ before_action :mover_to_index, except: [:index, :show]
     if prototype.save
       redirect_to root_path
     else
+      @prototype = Prototype.new
       render :new
     end
   end
